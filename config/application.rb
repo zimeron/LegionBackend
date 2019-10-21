@@ -22,7 +22,8 @@ module LegionBackend
         resource(
           '*',
           headers: :any,
-          methods: [:get, :patch, :put, :delete, :post, :options]
+          methods: [:get, :patch, :put, :delete, :post, :options],
+          expose: ['Access-Control-Allow-Origin']
           )
       end
     end
