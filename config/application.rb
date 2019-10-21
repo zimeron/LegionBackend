@@ -18,12 +18,11 @@ module LegionBackend
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'elderscrollslegion.herokuapp.com/*'
+        origins '*'
         resource(
           '*',
           headers: :any,
-          methods: [:get, :patch, :put, :delete, :post, :options],
-          expose: ['access-token', 'expiry', 'token-type', 'uid', 'client']
+          methods: [:get, :patch, :put, :delete, :post, :options]
           )
       end
     end
