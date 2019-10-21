@@ -23,7 +23,7 @@ module LegionBackend
           '*',
           headers: :any,
           methods: [:get, :patch, :put, :delete, :post, :options],
-          expose: ['Access-Control-Allow-Origin']
+          expose: ['access-token', 'expiry', 'token-type', 'uid', 'client']
           )
       end
     end
