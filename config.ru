@@ -4,7 +4,7 @@ require_relative 'config/environment'
 
 use Rack::Cors do
     allow do
-      origins 'elderscrollslegion.herokuapp.com'
+      origins 'elderscrollslegion.herokuapp.com/*'
   
       resource '*',
           methods: [:get, :post, :delete, :put, :patch, :options, :head],
