@@ -11,6 +11,8 @@ module LegionBackend
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    config.api_only = true
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
@@ -18,12 +20,10 @@ module LegionBackend
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
-        resource(
-          '*',
+        origins 'localhost:3000', 'localhost:4200', 'elderscrollslegion.herokuapp.com'
+          resource '*',
           headers: :any,
           methods: [:get, :patch, :put, :delete, :post, :options]
-          )
       end
     end
   end
