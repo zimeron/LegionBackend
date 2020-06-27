@@ -1,0 +1,2 @@
+class Characterclass < ApplicationRecord
+end
