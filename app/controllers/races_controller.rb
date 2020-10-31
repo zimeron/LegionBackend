@@ -15,6 +15,7 @@ class RacesController < ApplicationController
             @subrace.abilitymodifiers do |abilitymod|
                 @race.abilitymodifiers[i] += abilitymod
                 i += 1
+            end
             @race.size = @subrace.size
             @race.skillproficiencies + @subrace.skillproficiencies
             @race.toolsandlanguages + @subrace.toolsandlanguages
