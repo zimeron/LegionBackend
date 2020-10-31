@@ -1,0 +1,2 @@
+class SubRace < ApplicationRecord
+end
